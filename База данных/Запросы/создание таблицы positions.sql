@@ -1,0 +1,8 @@
+USE BakeryDB
+CREATE TABLE Positions
+(
+PositionID INT NOT NULL IDENTITY (1, 1),
+PositionName NVARCHAR(30) NOT NULL,
+Possibilities NVARCHAR(300)
+CONSTRAINT primart_posID PRIMARY KEY(PositionID)
+)

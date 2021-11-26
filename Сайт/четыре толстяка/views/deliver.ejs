@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доставка</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="public/css/style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/157ef05b37.js" crossorigin="anonymous"></script>
+    <script src="public/script/script.js"></script>
+</head>
+<body>
+<%-include ('blocks/header.ejs')%>
+<div class="container-sm">
+    <h5 class="text-center">Оплата</h5>
+    <p class="text-sm-start">Дорогие покупатели! В нашем магазине вы можете оплатить товар любым удобным для Вас способом, а именно:</p>
+    <ul class="delivery-list">
+        <li>Оплата банковскими карточками через систему Epay Казкомерц Банка: VISA, Master Card, UPI. Разрешены транзакции по карточкам эмитированным в следующих странах: KAZ, RUS, AZE, TJK, UKR, UZB, TKM, KGZ, ARM, BLR, GEO. Не проводятся транзакции: по корпоративным картам, карточкам American Express, не поддерживающие 3D Secure (SSL) технологию. Транзакции проводятся на стороне процессингового центра Epay Казкомерц Банка</li>
+        <li>Через сервис по приему платежей PayBox. PayBox это универсальная система платежей с помощью которой Вы можете оплачивать товары в нашем интернет магазины используя огромное количество способов, выбирая из них наиболее удобный для Вас.</li>
+    </ul>
+    <h5 class="text-center">Доставка</h5>
+    <p class="text-sm-start">Дорогие покупатели! В нашем магазине вы можете оплатить товар любым удобным для Вас способом, а именно:</p>
+    <ul class="delivery-list">
+        <li class="underline">Нашим курьером по городу Нур-Султан:</li>
+        <ul>
+            <li>Стоимость доставки 700тг</li>
+            <li>Доставка бесплатная при заказе на сумму от 7000 тенге</li>
+        </ul>
+        <li class="underline">Самовывоз</li>
+        <ul>
+            <li>Самовывоз из любого магазина. Только при заказе за сутки</li>
+        </ul>
+    </ul>
+</div>
+<%-include ('blocks/footer.ejs')%>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

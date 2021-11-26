@@ -1,0 +1,27 @@
+USE BakeryDB
+GO
+CREATE TRIGGER TAfterDeleteStaff
+ON Staff
+INSTEAD OF DELETE 
+AS
+BEGIN
+	BEGIN
+		ALTER TABLE Users
+		NOCHECK CONSTRAINT foreign_user
+	END
+	BEGIN
+	DELETE FROM Users
+	WHERE Users.staffID = (
+		SELECT staffID FROM DELETED)
+	END
+	BEGIN
+		DELETE FROM staff WHERE staffID = (SELECT StaffID FROM deleted)
+	END
+	BEGIN
+		DELETE FROM Users WHERE staffID = (SELECT StaffID FROM deleted)
+	END
+	BEGIN
+		ALTER TABLE Users
+		CHECK CONSTRAINT foreign_user
+	END
+END
