@@ -11,3 +11,13 @@
 </p>
 <p>main Node JS script is located in server-side-script.js floder</p>
 <p>most likely you will not be able to start server because it's data base is into localhost</p>
+<p>
+  Sreenshots:
+  <ol>
+    <li>https://res.cloudinary.com/dkls0mzrb/image/upload/v1638094086/images%20for%20bakery/screenshots/2_f6dttw.png</li> 
+    <li>https://res.cloudinary.com/dkls0mzrb/image/upload/v1638094086/images%20for%20bakery/screenshots/3_znhgnn.png</li>
+    <li>https://res.cloudinary.com/dkls0mzrb/image/upload/v1638094085/images%20for%20bakery/screenshots/4_u1yyxb.png</li>
+    <li>https://res.cloudinary.com/dkls0mzrb/image/upload/v1638094084/images%20for%20bakery/screenshots/5_g94rhs.png</li>
+    <li>https://res.cloudinary.com/dkls0mzrb/image/upload/v1638093955/images%20for%20bakery/screenshots/1_pagdc6.png</li>
+  </ol>
+</p>
