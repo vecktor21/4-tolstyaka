@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="public/css/style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/157ef05b37.js" crossorigin="anonymous"></script>
+    <script src="public/script/script.js"></script>
+    <script src="public/script/fillPayment.js"></script>
+</head>
+<body>
+<!--хедер-->
+<%-include ('blocks/header.ejs')%>
+<!--корзина-->
+<section>
+    <div class="container-sm">
+        <div class="card">
+
+        </div>
+    </div>
+    <!--форма для оплаты-->
+    <div class="container-sm">
+        <div class="card">
+            <div class="card-body">
+                <form method="post" action="/payment">
+                    <h5 class="card-header">Товары:</h5>
+                    <div class="card-body" id="cartItems">
+                        <!--элементы корзины-->
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Ваше Имя</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Контактный номер:</label>
+                        <input type="text" class="form-control" id="phone" name="phone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Самовывоз из:</label>
+                        <select class="form-select">
+                            <option selected value="1">Проспект Бауыржан Момышулы 8.</option>
+                            <option value="2">других вариантов нет</option>
+                        </select>
+                    </div>
+                    <p class="card-text" id="itog">Итого:</p>
+                    <button type="submit" class="btn btn-primary">Заказать</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<%-include ('blocks/footer.ejs')%>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>
