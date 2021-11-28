@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "local-storage": "^2.0.0",
+    "mysql2": "^2.3.3-rc.0"
+  },
+  "name": "bakery",
+  "version": "1.0.0",
+  "main": "server-side-script.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vecktor_21",
+  "license": "ISC",
+  "description": ""
+}

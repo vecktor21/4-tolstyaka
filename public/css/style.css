@@ -1,0 +1,75 @@
+.col{
+    padding: 5px;
+}
+section{
+    padding-top: 50px;
+}
+
+.carousel-control-next-icon{
+    background-color: rgba(148, 148, 148, 50%);
+    background-image: url('../icons/chevron-right-solid.svg');
+}
+.carousel-control-prev-icon{
+    background-color: rgba(148, 148, 148, 50%);
+    background-image: url('../icons/chevron-left-solid.svg');
+}
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    height: 50px;
+    width: 50px;
+}
+.menu .card{
+    margin: 50px 0px;
+    height: 700px;
+}
+.delivery-list li{
+    margin: 20px 0 20px 0;
+}
+.underline{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.btn{
+    margin-bottom: 20px;
+}
+.countCakes{
+    width: 5em;
+    margin-left: 20px;
+}
+.menuContainer{
+    position: absolute;
+}
+.cardContainer .btn{
+    position: relative;
+    bottom: 5px;
+}
+.reduce:hover, .add:hover{
+    cursor: pointer;
+    color: #0b5ed7;
+
+}
+.reduce:active, .add:active{
+
+    color: #0445A4;
+}
+
+.reduce{
+    margin: 0 20px 0 0;
+    color: #0d6efd;
+}
+.add{
+    margin: 0 0 0 20px;
+    color: #0d6efd;
+ }
+.buttonsCart{
+    display: flex;
+    justify-content: space-between;
+}
+.description .card-text{
+    float: none;
+}
