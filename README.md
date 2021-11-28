@@ -5,7 +5,8 @@
   To copy project you have to:
   <ol>
     <li>in CMD choose directory where you want to install this project</li> 
-    <li>copy this in CMD: <span style="font-family: Consolas">git clone https://github.com/vecktor21/4-tolstyaka.git</span></li>
+    <li>copy this in CMD: <b>"git clone https://github.com/vecktor21/4-tolstyaka.git"</b></li>
+    <li>install modules from packaje.json using "npm i"</li>
   </ol>
 </p>
 <p>main Node JS script is located in server-side-script.js floder</p>
