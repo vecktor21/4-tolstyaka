@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 const config = require('./config');
 const ls = require('local-storage');
-const PORT = process.env.PORT || 3000;
+const PORT = 3001;
 app.set('view engine', 'ejs');
 app.use('/public', express.static('public'));
 
@@ -102,29 +102,16 @@ app.get('/main', (req, res)=>{
         res.render('error', {});
     }
 });
-/*app.post('/main', (req, res)=>{
-    let category = req.query.category;
-    console.log(req.body);
-    (async function (){
-        if(category <= 4 && category > 0){
-            let rowsFromTable = '';
-            if (category == null){
-                rowsFromTable = await executeQuery(config, 'SELECT cakes.ID, cakes.name, cakes.discription, cakes.composition, cakes.price, cakes.weight, cakes.image, categories.name AS \'category\' FROM cakes INNER JOIN categories ON cakes.categoryID = categories.categoryID')
-            }else{
-                rowsFromTable = await executeQuery(config, `SELECT cakes.ID, cakes.name, cakes.discription, cakes.composition, cakes.price, cakes.weight, cakes.image, categories.name AS \'category\' FROM cakes INNER JOIN categories ON cakes.categoryID = categories.categoryID WHERE categories.categoryID = ${category}`)
-            }
-            //console.log(rowsFromTable);
-            const cakes = {
-                rows: rowsFromTable
-            }
-            //console.log(cakes);
-            res.render('main', {content: cakes});
-        }
-        else if(category > 4 && category <= 0){
-            res.render('error', {});
-        }
-    })();
-});*/
+
+//на страницу оплаты
+app.get('/payment', (req, res)=>{
+    res.render('buy');
+});
+app.post('/payment', urlencodedParser, (req, res)=>{
+    if(!req.body) return res.sendStatus(400);
+    console.log(req.body)
+    res.render('cart');
+});
 app.get('/contact', (req, res)=>{
     res.render('contact', {});
 });
@@ -135,6 +122,7 @@ app.get('/cart', (req, res)=>{
     const cartElems = ls.get('cartElements');
     res.render('cart', {cart: cartElems});
 });
+
 
 app.listen(PORT);
 

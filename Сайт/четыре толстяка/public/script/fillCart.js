@@ -6,11 +6,9 @@ window.onload = ()=>{
     const addCartButtons = document.querySelectorAll(".add");
     for (var i = 0; i < reduceCartButtons.length; i++) {
         reduceCartButtons[i].onclick = function () {
-            console.log('работает удаление')
             reduceCount(cart, (this.id).split('reduce')[1]);
         }
         addCartButtons[i].onclick = function () {
-            console.log('работает добавление')
             addCount(cart, (this.id).split('add')[1]);
         }
         //addCartButtons[i].onclick = addCount;
@@ -19,7 +17,16 @@ window.onload = ()=>{
         localStorage.clear();
         window.location.reload();
     }
-    document.getElementById('toPay').onclick = ()=>{window.location.href = '/'}
+    document.getElementById('toPay').onclick = ()=>{
+        const cart = JSON.parse(localStorage.getItem('cart'));
+        if (cart.length == 0){
+            alert('Пустая корзина');
+        }
+        else{
+            localStorage.setItem('cart', JSON.stringify(cart));
+            window.location.href = '/payment'
+        }
+    }
 }
 function fillCart(cart) {
     document.getElementById('cartItems').innerHTML = '';
